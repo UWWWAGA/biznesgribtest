@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Грибная ферма</title>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+      m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+      m[i].l = 1 * new Date();
+      for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+      k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+    })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=107277276', 'ym');
+    ym(107277276, 'init', { ssr: true, webvisor: true, clickmap: true, ecommerce: "dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce: true, trackLinks: true });
+  </script>
+  <noscript>
+    <div><img src="https://mc.yandex.ru/watch/107277276" style="position:absolute; left:-9999px;" alt="" /></div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
+  <link rel="shortcut icon" type="image/x-icon" href="./img/favicons/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="scroll-header" id="scrollHeader">
+      <div class="header-pill">
+
+        <div class="logo"> <a href="/index.html">
+            <img src="./img/favicons/favicon.png" alt="Логотип">
+          </a>
+        </div>
+
+        <nav class="desktop-nav">
+          <a href="#analysis">Анализ</a>
+          <a href="#about">О нас</a>
+          <a href="#approach">Почему не франшиза</a>
+          <a href="#training">Обучение</a>
+          <a href="#calculator">Калькулятор</a>
+          <a href="#FAQ">FAQ</a>
+          <a href="#contacts">Контакты</a>
+        </nav>
+
+        <button class="burger" aria-label="Открыть меню" id="burgerBtn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="close-btn" id="closeMenu"></button>
+      <nav class="mobile-nav">
+        <a href="#analysis">Анализ</a>
+        <a href="#about">О нас</a>
+        <a href="#approach">Почему не франшиза</a>
+        <a href="#training">Обучение</a>
+        <a href="#calculator">Калькулятор</a>
+        <a href="#FAQ">FAQ</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero-section">
+      <video class="hero-video" autoplay loop muted playsinline>
+        <source src="./videos/hero.mp4" type="video/mp4">
+        Ваш браузер не поддерживает видео.
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="container">
+
+        <div class="top-badge">
+          Без франшизы. Без роялти. Честное партнёрство.
+        </div>
+
+        <h1 class="main-title">
+          Откройте свою <span class="text-green">грибную<br>ферму</span> в своём регионе
+        </h1>
+
+        <p class="subtitle">
+          Полная технология выращивания шампиньонов. Без франшизы.<br>
+          Без роялти. Без процентов с продаж.
+        </p>
+
+        <div class="features">
+          <div class="feature-item">
+            <svg class="check-icon" viewBox="0 0 24 24" fill="none" xmlns="https://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="12" fill="#00D26A" />
+              <path d="M7 12.5L10.5 16L17 8" stroke="white" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            Обучение на действующем производстве (2 недели)
+          </div>
+          <div class="feature-item">
+            <svg class="check-icon" viewBox="0 0 24 24" fill="none" xmlns="https://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="12" fill="#00D26A" />
+              <path d="M7 12.5L10.5 16L17 8" stroke="white" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            Гарантированные поставки компоста Фазы 2
+          </div>
+          <div class="feature-item">
+            <svg class="check-icon" viewBox="0 0 24 24" fill="none" xmlns="https://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="12" fill="#00D26A" />
+              <path d="M7 12.5L10.5 16L17 8" stroke="white" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            Окупаемость от 12 месяцев
+          </div>
+        </div>
+
+        <a href="#contact" class="cta-button">
+          Получить расчёт окупаемости &rarr;
+        </a>
+
+        <p class="disclaimer">
+          Бесплатно • Без обязательств • Ответим за 24 часа
+        </p>
+
+      </div>
+    </section>
+
+    <section class="market-analysis" id="analysis">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="badge_green">Анализ рынка</span>
+          <h2 class="section-title">
+            Грибной бизнес &mdash; это <span class="text-green">стабильный спрос</span>
+          </h2>
+          <p class="section-description">
+            Потребление шампиньонов в России ежегодно растет. Рынок далек от<br>
+            насыщения, а местные производители имеют огромное преимущество<br>
+            перед импортом.
+          </p>
+        </div>
+
+        <div class="market-grid">
+
+          <div class="cards-column">
+
+            <div class="market-card card-green">
+              <div class="icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#00D26A" stroke-width="2">
+                  <path d="M3 17l6-6 4 4 8-8" />
+                  <path d="M14 7h7v7" />
+                </svg>
+              </div>
+              <h3 class="card-value">10&ndash;15%</h3>
+              <p class="card-text">рост рынка в год</p>
+            </div>
+
+            <div class="market-card card-orange">
+              <div class="icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#FF9D16" stroke-width="2">
+                  <path d="M6 6h15l-1.5 9h-12L6 6z" />
+                  <path d="M6 6l-1-4h14l1 4" />
+                  <circle cx="9" cy="20" r="1" />
+                  <circle cx="18" cy="20" r="1" />
+                </svg>
+              </div>
+              <h3 class="card-value">#1</h3>
+              <p class="card-text">продукт первой необходимости</p>
+            </div>
+
+            <div class="market-card card-blue">
+              <div class="icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#4C80FF" stroke-width="2">
+                  <path d="M18 20V10M12 20V4M6 20v-6" />
+                </svg>
+              </div>
+              <h3 class="card-value_small">Высокая</h3>
+              <p class="card-text">маржинальность при правильной технологии</p>
+            </div>
+
+            <div class="market-card card-purple">
+              <div class="icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#9A66FF" stroke-width="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 6v6l4 2" />
+                </svg>
+              </div>
+              <h3 class="card-value">35</h3>
+              <p class="card-text">дней от компоста до урожая</p>
+            </div>
+
+          </div>
+          <div class="infographic-column">
+            <div class="chart-card">
+              <h3 class="chart-title">Потребление шампиньонов в РФ/СНГ</h3>
+              <p class="chart-subtitle">тыс. тонн в год</p>
+
+              <div class="svg-chart-container">
+                <img class="infographics" src="./img/Group 11712754152222222.svg" alt="График потребления шампиньонов">
+              </div>
+
+              <div class="chart-legend">
+                <div class="legend-item"><span class="dot-green"></span> Факт</div>
+                <div class="legend-item"><span class="dot-empty"></span> Прогноз</div>
+                <div class="growth-label">+172% за 7 лет</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="badge_green">О компании</span>
+          <h2 class="section-title">Кто мы?</h2>
+          <p class="section-description">
+            Мы — реальное действующее производство компоста и шампиньонов. Не консультанты, не посредники. Мы выращиваем
+            сами и передаём свой опыт партнёрам.
+          </p>
+        </div>
+
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-num">16+</span>
+            <span class="stat-desc">лет на рынке</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">480+</span>
+            <span class="stat-desc">тонн грибов в год</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">15+</span>
+            <span class="stat-desc">партнёрских ферм запущено</span>
+          </div>
+        </div>
+
+        <div class="about-gallery">
+          <div class="gallery-item">
+            <img src="./img/847.JPG" alt="Собственное производство">
+            <div class="gallery-overlay">
+              <h4>Производственный комплекс</h4>
+              <p>Линии приготовления компоста Фазы 2</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="./img/IMG_7109-18-06-18-05-14.JPG" alt="Производственный комплекс">
+            <div class="gallery-overlay">
+              <h4>Собственное производство</h4>
+              <p>Выращиваем шампиньоны на собственных камерах</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-footer">
+          <div class="docs-col">
+            <h3>Документы и сертификаты</h3>
+            <ul class="docs-list">
+              <li><span class="check">✓</span> ГОСТ Р 54635</li>
+              <li><span class="check">✓</span> ISO 9001</li>
+              <li><span class="check">✓</span> Ветеринарный сертификат</li>
+              <li><span class="check">✓</span> Фитосанитарный контроль</li>
+            </ul>
+          </div>
+          <div class="links-col">
+            <h3>Наши сайты — подтверждение реальности бизнеса</h3>
+            <div class="site-links">
+              <a href="https://compost18.ru" class="site-card" target="_blank">
+                <div class="site-icon">🌐</div>
+                <div class="site-info">
+                  <strong>compost18.ru</strong>
+                  <span>Партнеры производители компоста</span>
+                </div>
+                <span class="arrow-up-right">↗</span>
+              </a>
+              <a href="https://compost1.ru" class="site-card" target="_blank">
+                <div class="site-icon">🌐</div>
+                <div class="site-info">
+                  <strong>compost1.ru</strong>
+                  <span>Грибная ферма и выращивание шампиньонов</span>
+                </div>
+                <span class="arrow-up-right">↗</span>
+              </a>
+            </div>
+            <h3>Наши соц сети</h3>
+            <div class="site-links">
+              <a href="https://t.me/IzhevskMushroomFarm" class="site-card" target="_blank">
+                <div class="site-icon">🌐</div>
+                <div class="site-info">
+                  <strong>Telegram</strong>
+                  <span>Обучающий канал, где мы делимся нюансами производства с вами</span>
+                </div>
+                <span class="arrow-up-right">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="comparison-section" id="approach">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="badge_green">Честное партнёрство</span>
+          <h2 class="section-title">Почему мы <span class="text-green">не франшиза?</span></h2>
+          <p class="section-description">
+            Мы не хотим быть вашим «вечным налогом». Мы заинтересованы в том,<br>
+            чтобы вы стали нашим крупным оптовым покупателем компоста и<br>
+            <span class="text-dark">успешным партнёром.</span>
+          </p>
+        </div>
+
+        <div class="comparison-card">
+          <div class="table-grid">
+            <div class="grid-header param-label">Параметр</div>
+            <div class="grid-header competitors">
+              <span class="cross-icon">✕</span>
+              Обычная франшиза
+            </div>
+            <div class="grid-header our-offer">
+              <span class="check-icon-white">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <path d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              Наше партнёрство
+            </div>
+
+            <div class="grid-cell param">Паушальный взнос</div>
+            <div class="grid-cell bad">✕ 500 000 – 2 000 000 ₽</div>
+            <div class="grid-cell good">✓ 0 ₽</div>
+
+            <div class="grid-cell param">Роялти</div>
+            <div class="grid-cell bad">✕ 5–10% с оборота ежемесячно</div>
+            <div class="grid-cell good">✓ 0 ₽</div>
+
+            <div class="grid-cell param">Обязательные закупки</div>
+            <div class="grid-cell bad">✕ По завышенной цене франшизора</div>
+            <div class="grid-cell good">✓ Прямые цены от производителя</div>
+
+            <div class="grid-cell param">Вы платите только за</div>
+            <div class="grid-cell bad">✕ Вход в систему + % с прибыли</div>
+            <div class="grid-cell good">✓ 2 недели обучения на нашем заводе</div>
+
+            <div class="grid-cell param">Технологическая поддержка</div>
+            <div class="grid-cell bad">✕ Платная или ограниченная</div>
+            <div class="grid-cell good">✓ Бесплатно, пожизненно</div>
+
+            <div class="grid-cell param">Свобода выбора поставщиков</div>
+            <div class="grid-cell bad">✕ Нет (жёсткий контроль)</div>
+            <div class="grid-cell good">✓ Да, но рекомендуем наш компост</div>
+          </div>
+        </div>
+
+        <div class="goal-banner">
+          <div class="goal-icon">🤝</div>
+          <div class="goal-text">
+            <h3>Наша цель — ваш успех</h3>
+            <p>Чем лучше растёт ваша ферма, тем больше компоста вы покупаете у нас. Наши интересы полностью совпадают.
+              Именно поэтому мы готовы делиться технологией без скрытых платежей.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="learning-section" id="training">
+      <div class="container">
+        <div class="learning-grid">
+
+          <div class="learning-content">
+            <span class="badge_green">Обучение</span>
+            <h2 class="section-title">Мы передаём опыт, <span class="text-green">а не просто теорию</span></h2>
+            <p class="section-description">
+              Единственная плата с вашей стороны — стоимость обучения на нашем предприятии в течение <strong>2
+                недель</strong>.
+              Вы работаете руками, видите весь цикл производства и уходите с готовым технологом внутри команды.
+            </p>
+
+            <div class="steps-list">
+              <div class="step-item">
+                <div class="step-number">01</div>
+                <div class="step-info">
+                  <h4>Прозрачные условия старта: визит на ферму и оплата</h4>
+                  <p>Личное знакомство с производством перед началом обучения. Вы можете приехать к нам на ферму,
+                    увидеть
+                    процессы своими глазами и принять решение об оплате на месте.</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-number">02</div>
+                <div class="step-info">
+                  <h4>Комплект рабочей документации и спецификации оборудования</h4>
+                  <p>После старта обучения предоставляем детализированные списки оборудования с характеристиками, а
+                    также
+                    полную смету материалов для запуска вашей фермы.</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-number">03</div>
+                <div class="step-info">
+                  <h4>Пост-тренинговая поддержка 24/7</h4>
+                  <p>Обучение не заканчивается после тренинга. Мы остаемся на связи для дистанционных консультаций по
+                    любым вопросам — от болезней до выхода на плановую урожайность.</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-number">04</div>
+                <div class="step-info">
+                  <h4>Годовое сопровождение "Полевой аудит"</h4>
+                  <p>Закрепляем теорию практикой. Раз в год мы выезжаем к вам на ферму, проводим ревизию процессов и
+                    даем
+                    персональные рекомендации по улучшению именно вашего производства.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="learning-result-card">
+              <div class="result-icon">🎓</div>
+              <div class="result-text">
+                <strong>Результат обучения</strong>
+                <p>Вы получаете технолога внутри своей команды и полную уверенность в запуске. Мы остаёмся на связи
+                  после
+                  обучения.</p>
+              </div>
+            </div>
+
+            <a href="#contact" class="cta-button">Связаться &rarr;</a>
+          </div>
+
+          <div class="learning-image-side">
+            <div class="image-wrapper">
+              <img src="./img/result_training.png" alt="Практическое обучение на ферме">
+
+              <div class="floating-badge">
+                <div class="badge-icon-yellow">🌱</div>
+                <div class="badge-content">
+                  <strong>14 дней практики</strong>
+                  <p>На действующем производстве полного цикла</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="calc-section" id="calculator">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge_green">Калькулятор</span>
+          <h2 class="section-title">Рассчитайте <span class="text-green">свою прибыль</span></h2>
+        </div>
+
+        <div class="calc-grid">
+          <div class="calc-inputs">
+            <h3 class="block-title">Параметры камеры выращивания</h3>
+
+            <div class="input-group">
+              <label>Размеры помещения (Длина / Ширина / Высота), м</label>
+              <div class="triple-input">
+                <input type="number" id="room-length" value="6" step="0.1">
+                <input type="number" id="room-width" value="5" step="0.1">
+                <input type="number" id="room-height" value="3" step="0.1">
+              </div>
+            </div>
+
+            <div class="input-row">
+              <div class="input-field">
+                <label>Цена на гриб, руб/кг</label>
+                <input type="number" id="mushroom-price" value="150">
+              </div>
+              <div class="input-field">
+                <label>Урожайность, %</label>
+                <input type="number" id="yield-percent" value="30">
+              </div>
+            </div>
+          </div>
+
+          <div class="calc-results">
+            <div class="results-main">
+              <div class="res-item">
+                <span>Загрузка компоста</span>
+                <strong id="res-compost">0</strong> <small>тонн</small>
+              </div>
+              <div class="res-item">
+                <span>Площадь полок</span>
+                <strong id="res-area">0</strong> <small>м²</small>
+              </div>
+            </div>
+
+            <div class="results-details">
+              <div class="detail-row">
+                <span>Покровная смесь:</span>
+                <b id="res-casing">0 л.</b>
+              </div>
+              <div class="detail-row">
+                <span>Длина стеллажа / ярусов:</span>
+                <b id="res-racks">0 м.</b>
+              </div>
+              <div class="detail-row">
+                <span>Стоимость стеллажей:</span>
+                <b id="res-rack-cost">0 ₽</b>
+              </div>
+              <div class="detail-row">
+                <span>Сбор за 3 волны:</span>
+                <b id="res-total-weight">0 кг.</b>
+              </div>
+            </div>
+
+            <div class="final-box">
+              <div class="final-label">Выручка за год (7 циклов)</div>
+              <div class="final-value" id="res-year-rev">0 ₽</div>
+              <div class="final-sub">≈ <span id="res-cycle-rev">0</span> ₽ за цикл</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section" id="FAQ">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="badge_green">Частые вопросы</span>
+          <h2 class="section-title">Отвечаем на ваши <span class="text-green">возражения</span></h2>
+          <p class="section-description">
+            Собрали самые частые вопросы от потенциальных партнёров. Если ваш вопрос не нашли — напишите нам напрямую.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item active">
+            <div class="faq-question">
+              <span>Обязательно ли покупать компост у вас?</span>
+              <div class="faq-icon"></div>
+            </div>
+            <div class="faq-answer">
+              <p>Нет, это не обязательство. Но наша технология выращивания калибрована под наш компост, что гарантирует
+                заявленную урожайность. С компостом от другого поставщика результат не гарантируем — слишком много
+                переменных вне нашего контроля.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Вы помогаете со сбытом продукции?</span>
+              <div class="faq-icon"></div>
+            </div>
+            <div class="faq-answer">
+              <p>Да, мы консультируем по каналам сбыта и помогаем выстроить логистику до оптовых покупателей или
+                торговых
+                сетей в вашем регионе.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Что если у меня не получится?</span>
+              <div class="faq-icon"></div>
+            </div>
+            <div class="faq-answer">
+              <p>Для этого мы проводим 2-недельное обучение и осуществляем пожизненную техподдержку. Мы заинтересованы в
+                вашем успехе как в стабильном покупателе сырья.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Нужно ли специальное образование для запуска?</span>
+              <div class="faq-icon"></div>
+            </div>
+            <div class="faq-answer">
+              <p>Специальное агрономическое образование не требуется. Вся технология передается в процессе обучения и
+                закреплена в инструкциях.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Как быстро можно запустить первое производство?</span>
+              <div class="faq-icon"></div>
+            </div>
+            <div class="faq-answer">
+              <p>От момента готовности помещения до первого сбора урожая обычно проходит 35 дней.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Есть ли у вас гарантии?</span>
+              <div class="faq-icon"></div>
+            </div>
+            <div class="faq-answer">
+              <p>Более 16 лет мы стабильно работаем на рынке — и это уже само по себе лучшая гарантия надёжности и
+                качества. Дальше всё зависит от вашей вовлечённости и желания получить результат.
+                Каждую партию компоста мы тщательно загружаем у себя и лично видим реальный эффект — от первых всходов
+                до плановой урожайности.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container">
+
+        <div class="section-header text-white">
+          <h2 class="section-title"> <span class="white-text">Готовы начать</span> <span
+              class="text-green-bright">грибной
+              бизнес?</span></h2>
+          <p class="section-description white">
+            Оставьте заявку, мы свяжемся с вами, ответим на все вопросы и вышлем презентацию с расчётами.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-form-card">
+            <form id="lead-form">
+              <div class="form-group">
+                <label>Ваше имя</label>
+                <input type="text" placeholder="Иван Иванов" required>
+              </div>
+              <div class="form-group">
+                <label>Телефон</label>
+                <input type="tel" placeholder="+7 (___) ___-__-__" required>
+              </div>
+              <div class="form-group">
+                <label>Регион</label>
+                <input type="text" placeholder="Москва, Краснодар, Новосибирск..." required>
+              </div>
+              <div class="form-group">
+                <label>Интересующий бюджет</label>
+                <select required>
+                  <option value="" disabled selected>Выберите вариант</option>
+                  <option value="1-3">1 - 3 млн ₽</option>
+                  <option value="3-5">3 - 5 млн ₽</option>
+                  <option value="5+">Более 15 млн ₽</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn-submit">
+                <span>✈</span> Получить бизнес-план и расчёт
+              </button>
+
+              <p class="form-footer">
+                Отправляя форму, вы соглашаетесь с <a href="/policy.html">политикой конфиденциальности</a></a>
+              </p>
+            </form>
+          </div>
+
+          <div class="contact-info">
+            <h3>Свяжитесь с нами напрямую</h3>
+
+            <div class="info-list">
+              <div class="info-item">
+                <a href="tel:89508116677">
+                  <div class="info-icon">📞</div>
+                  <div class="info-text">
+                    <small>Телефон</small>
+                    <strong>8 950 811 66 77</strong>
+                </a>
+                <span>Пн-Пт, 9:00–18:00 МСК</span>
+              </div>
+            </div>
+
+            <div class="info-item whatsapp-active">
+              <div class="info-icon">💬</div>
+              <div class="info-text">
+                <small>Telegram</small>
+                <strong>@Name</strong>
+                <span>Отвечаем быстро</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <a href="mailto:89508116677@mail.ru">
+                <div class="info-icon">📧</div>
+                <div class="info-text">
+                  <small>Email</small>
+                  <strong>89508116677@mail.ru</strong>
+              </a>
+              <span>Для деловых вопросов</span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">📍</div>
+            <div class="info-text">
+              <small>Адрес завода</small>
+              <strong>г. Ижевск, ул. Производственная, 1</strong>
+              <span>Приём партнёров по записи</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+
+    <section class="footer">
+      <footer class="main-footer">
+        <div class="container">
+          <div class="footer-top">
+            <div class="footer-brand">
+              <div class="logo-footer">Ижевская<span> Грибница</span></div>
+              <p class="footer-motto">
+                Помогаем запускать прибыльные грибные фермы с 2017 года по всей России и СНГ.
+              </p>
+            </div>
+
+            <div class="footer-nav">
+              <div class="footer-col">
+                <h4>Навигация</h4>
+                <ul>
+                  <li><a href="#analysis">Анализ</a></li>
+                  <li><a href="#about">О нас</a></li>
+                  <li><a href="#approach">Почему не франшиза</a></li>
+                  <li><a href="#training">Обучение</a></li>
+                  <li><a href="#calculator">Калькулятор</a></li>
+                  <li><a href="#FAQ">FAQ</a></li>
+                  <li><a href="#contacts">Контакты</a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4>Ресурсы</h4>
+                <ul>
+                  <li><a href="https://compost18.ru" target="_blank">compost18.ru</a></li>
+                  <li><a href="https://compost1.ru" target="_blank">compost1.ru</a></li>
+                  <li><a href="#">Политика конфиденциальности</a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4>Контакты</h4>
+                <ul>
+                  <li><a href="tel:+78000000000">+7 (800) 000-00-00</a></li>
+                  <li><a href="mailto:info@gribnoe-delo.ru">info@gribnoe-delo.ru</a></li>
+                  <li><a href="https://t.me/IzhevskMushroomFarm" target="_blank">Telegram</a></li>
+                  <li>г. Ижевск, ул. Производственная, 1</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <div class="developer-credit">
+              <a href="https://uwwwaga.github.io/Buwaga/" target="_blank">Сайт создан Chaus.Code</a>
+            </div>
+            <div class="copyright">
+              © 2017–2026 «Ижевская Грибница». Все права защищены.
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </section>
+
+  </footer>
+
+  <script src="./scripts/script.js"></script>
+  <script src="./scripts/script-header.js"></script>
+
+</body>
+
+
+
+</html>

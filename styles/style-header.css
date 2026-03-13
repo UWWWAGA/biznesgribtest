@@ -1,0 +1,189 @@
+@import url(style.css);
+
+.scroll-header {
+  position: fixed;
+  top: -100px;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  transition: top 0.4s ease;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.scroll-header.visible {
+  top: 12px;
+  pointer-events: auto;
+}
+
+.header-pill {
+  background: #00d26a;
+  border-radius: 999px;
+  padding: 12px 24px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 28px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: white;
+  max-width: 1400px;
+  width: 80%;
+  position: relative;
+}
+
+.desktop-nav {
+  flex: 1;                           /* занимает всё доступное место */
+  display: flex;
+  justify-content: center;           /* ссылки по центру */
+  gap: 32px;
+}
+
+.logo {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-right: auto;
+  background: #fff;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header-pill a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.header-pill a:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+/* ────────────────────────────────────────────────
+   Бургер-иконка
+───────────────────────────────────────────────── */
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 100;
+}
+
+.burger span {
+  width: 100%;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.35s ease;
+}
+
+.burger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ────────────────────────────────────────────────
+   Мобильное меню 
+───────────────────────────────────────────────── */
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  z-index: 98;
+  pointer-events: none;
+}
+
+.mobile-menu.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.mobile-menu .close-btn {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background: none;
+  border: none;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+  text-align: center;
+}
+
+.mobile-nav a {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.25s;
+}
+
+.mobile-nav a:hover {
+  color: #e0ffe0;
+  transform: scale(1.08);
+}
+
+/* ────────────────────────────────────────────────
+   Адаптив — показываем бургер
+───────────────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .header-pill {
+    gap: 16px;
+    padding: 12px 20px;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 420px;
+  }
+}
